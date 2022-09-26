@@ -1,0 +1,14 @@
+<mj-all font-family="Helvetica, Arial" font-size="14px" color="#28234a" line-height="1.5rem" />
+<mj-class name="accentColor" color="#056dff" />
+<mj-class name="primaryTextColor" color="#28234a" />
+<mj-class name="secondaryTextColor" color="#7f7b93" />
+<mj-class name="borderAccentColor" border-color="#056dff" />
+<mj-class name="small" font-size="12px" />
+<mj-class name="regular" font-size="14px" />
+<mj-class name="h1" font-size="1.4rem" font-weight="bold" padding-top="16px" />
+<mj-class name="h2" font-size="18px" font-weight="bold" />
+<mj-class name="topLogoStyle" width="28px" />
+<mj-class name="wrapperStyle" padding="50px 30px" border="0" />
+<mj-class name="mainSectionStyle" background-color="white" border="1px solid secondaryColor" padding="1rem 0.5rem" />
+<mj-class name="footerTextStyle" font-size="10px" line-height="1.2rem" align="center" color="#7f7b93" />
+<mj-class name="buttonStyle" background-color="#056dff" color="white" />

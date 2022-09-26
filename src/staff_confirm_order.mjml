@@ -1,0 +1,134 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-include path="./components/attributes.mjml" />
+      <mj-class name="orderTableHeader" background-color="#000" padding-bottom="10px" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#fafafa">
+    <mj-wrapper mj-class="wrapperStyle">
+      <mj-section mj-class="primaryTextColor regular mainSectionStyle">
+        <mj-column>
+
+          <mj-include path="./components/header.mjml" />
+
+          <mj-text mj-class="h1">New order just came in! 🎉</mj-text>
+
+          <mj-text mj-class="orderTableHeader">Someone placed a new order in your store.</mj-text>
+          <mj-text>To see order details please click the button "See order" below.</mj-text>
+          <mj-button mj-class="buttonStyle" href="{{order.order_details_url}}">See order</mj-button>
+
+
+          <!-- <mj-text mj-class="h2">The details of the order</mj-text> -->
+          <mj-table>
+            <thead class="table-header-row" style="border-bottom: 2px solid #D3D1D0">
+              <tr>
+                <th style="padding: 5px;">Item</th>
+                <th style="padding: 5px;">Qty</th>
+                <th style="padding: 5px;">Per unit</th>
+                <th style="padding: 5px;">Subtotal</th>
+              </tr>
+            </thead>
+
+            {{#each order.lines}}
+              <tr class="table-item-row" style="border-bottom: 1px solid #D3D1D0;">
+                {{#if variant_name}}
+                  <td style="padding: 5px;">{{product_name}} ({{variant_name}})</td>
+                {{else}}
+                  <td style="padding: 5px;">{{product_name}}</td>
+                {{/if}}
+                <td style="padding: 5px; text-align: right;" align="right">{{quantity}}</td>
+                <td style="padding: 5px; text-align: right;" align="right">
+                  {{price unit_price_net_amount unit_price_gross_amount ../order.currency display_gross=../order.display_gross_prices}}
+                </td>
+                <td style="padding: 5px; text-align: right;" align="right">
+                  {{price total_net_amount total_gross_amount ../order.currency display_gross=../order.display_gross_prices}}
+                </td>
+              </tr>
+            {{/each}}
+            <tfoot>
+              <tr>
+                <td colspan="3" style="padding: 5px; text-align: right;" align="right">Subtotal</td>
+                <td style="padding: 5px; text-align: right;" align="right">
+                  {{price order.subtotal_net_amount order.subtotal_gross_amount order.currency display_gross=order.display_gross_prices}}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" style="padding: 5px; text-align: right;" align="right">
+                  Shipping
+                </td>
+                <td style="padding: 5px; text-align: right;" align="right">
+                  {{price order.shipping_price_net_amount order.shipping_price_gross_amount order.currency display_gross=order.display_gross_prices}}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" style="padding: 5px; text-align: right;" align="right">
+                  {{#if order.display_gross_prices}}
+                    Taxes (included)
+                  {{else}}
+                    Taxes
+                  {{/if}}
+                </td>
+                <td style="padding: 5px; text-align: right;" align="right">
+                  {{price order.tax_amount order.tax_amount order.currency display_gross=order.display_gross_prices}}
+                </td>
+              </tr>
+              {{#if order.voucher_discount}}
+                <tr>
+                  <td colspan="3" style="padding: 5px; text-align: right;" align="right">
+                    Discount
+                  </td>
+                  <td style="padding: 5px; text-align: right;" align="right">
+                    {{price order.voucher_discount.amount_value order.voucher_discount.amount_value order.currency display_gross=order.display_gross_prices}}
+                  </td>
+                </tr>
+              {{/if}}
+              <tr>
+                <td colspan="3" style="padding: 5px; text-align: right;" align="right">
+                  <strong>
+                    Total
+                  </strong>
+                </td>
+                <td style="padding: 5px; text-align: right;" align="right">
+                  <strong>
+                    {{price order.total_net_amount order.total_gross_amount order.currency display_gross=order.display_gross_prices}}
+                  </strong>
+                </td>
+              </tr>
+            </tfoot>
+          </mj-table>
+          <mj-divider border-color="#D3D1D0" border-width="1px" border-style="dashed" />
+          <mj-table>
+            <thead class="table-header-row" style="border-bottom: 2px solid #D3D1D0;">
+              <tr>
+                <th style="padding: 5px;">Billing address</th>
+                <th style="padding: 5px;">Shipping address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="address" style="padding: 5px;">
+                  {{#if order.billing_address}}
+                    {{format_address order.billing_address}}
+                  {{else}}
+                    No billing address
+                  {{/if}}
+                </td>
+                <td css-class="address" style="padding: 5px;">
+                  {{#if order.shipping_address}}
+                    {{format_address order.shipping_address}}
+                  {{else}}
+                    No shipping required
+                  {{/if}}
+                </td>
+              </tr>
+            </tbody>
+          </mj-table>
+          <mj-spacer />
+          <mj-text>Have a great day!</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-include path="./components/footer.mjml" />
+    </mj-wrapper>
+  </mj-body>
+</mjml>

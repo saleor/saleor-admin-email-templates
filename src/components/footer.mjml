@@ -1,0 +1,5 @@
+<mj-section>
+  <mj-column>
+    <mj-text mj-class="footerTextStyle">This is an automatically generated e-mail, please do not reply. <br />Certain messages, like this one, are essectial to service operations.</mj-text>
+  </mj-column>
+</mj-section>

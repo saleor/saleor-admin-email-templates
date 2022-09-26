@@ -1,0 +1,26 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-include path="./components/attributes.mjml" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#fafafa">
+    <mj-wrapper mj-class="wrapperStyle">
+      <mj-section mj-class="primaryTextColor regular mainSectionStyle">
+        <mj-column>
+
+          <mj-include path="./components/header.mjml" />
+
+          <mj-text mj-class="h1">Hello,</mj-text>
+
+          <mj-text>We're happy to let you know that your file with {{data_type}} data is ready to download.</mj-text>
+          <mj-text>To download your {{data_type}} data, simply click the button below.</mj-text>
+          <mj-button mj-class="buttonStyle" href="{{csv_link}}">Download data</mj-button>
+
+          <mj-text>Have a great day and thank you!</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-include path="./components/footer.mjml" />
+    </mj-wrapper>
+  </mj-body>
+</mjml>

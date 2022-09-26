@@ -1,0 +1,24 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-include path="./components/attributes.mjml" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#fafafa">
+    <mj-wrapper mj-class="wrapperStyle">
+      <mj-section mj-class="primaryTextColor regular mainSectionStyle">
+        <mj-column>
+
+          <mj-include path="./components/header.mjml" />
+
+          <mj-text mj-class="h1">Hello,</mj-text>
+
+          <mj-text>Sorry, we couldn't finish exporting {{data_type}} due to unexpected errors. Please try again.</mj-text>
+
+          <mj-text>Our appolgies and thank you.</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-include path="./components/footer.mjml" />
+    </mj-wrapper>
+  </mj-body>
+</mjml>

@@ -1,2 +1,2 @@
-<mj-image mj-class="topLogoStyle" src="s-logo.svg"></mj-image>
+<mj-image mj-class="topLogoStyle" src="../resources/logo.png"></mj-image>
 <mj-divider mj-class="borderAccentColor"></mj-divider>

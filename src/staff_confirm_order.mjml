@@ -21,7 +21,7 @@
 
           <!-- <mj-text mj-class="h2">The details of the order</mj-text> -->
           <mj-table>
-            <thead class="table-header-row" style="border-bottom: 2px solid #D3D1D0">
+            <thead class="table-header-row" style="border-bottom: 2px solid #28234a">
               <tr>
                 <th style="padding: 5px;">Item</th>
                 <th style="padding: 5px;">Qty</th>
@@ -31,7 +31,7 @@
             </thead>
 
             {{#each order.lines}}
-              <tr class="table-item-row" style="border-bottom: 1px solid #D3D1D0;">
+              <tr class="table-item-row" style="border-bottom: 1px solid #28234a;">
                 {{#if variant_name}}
                   <td style="padding: 5px;">{{product_name}} ({{variant_name}})</td>
                 {{else}}
@@ -99,7 +99,7 @@
           </mj-table>
           <mj-divider border-color="#D3D1D0" border-width="1px" border-style="dashed" />
           <mj-table>
-            <thead class="table-header-row" style="border-bottom: 2px solid #D3D1D0;">
+            <thead class="table-header-row" style="border-bottom: 2px solid #28234a;">
               <tr>
                 <th style="padding: 5px;">Billing address</th>
                 <th style="padding: 5px;">Shipping address</th>

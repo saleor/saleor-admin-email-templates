@@ -5,11 +5,11 @@ A set of [MJML](https://mjml.io/) templates you can use to customize Saleor's ad
 NOTE: Saleor uses [Handlebars](https://handlebarsjs.com/) as a templating language, so both MJML templates and resulting HTML will be in that format.
 
 ## Saleor Admin Emails
-* Set Password Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/build/set_password.html)
-* Reset Password Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/build/password_reset.html)
-* Staff Order Confirmation Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/build/staff_confirm_order.html)
-* Export Successful Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/build/export_success.html)
-* Export Failed Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/build/export_failed.html)
+* Set Password Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/templated_email/compiled/set_password.html)
+* Reset Password Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/templated_email/compiled/password_reset.html)
+* Staff Order Confirmation Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/templated_email/compiled/staff_confirm_order.html)
+* Export Successful Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/templated_email/compiled/export_success.html)
+* Export Failed Email [Current Preview](https://htmlpreview.github.io/?https://github.com/saleor/saleor-admin-email-templates/blob/main/templated_email/compiled/export_failed.html)
 
 
 ## (MJML) installation and usage

@@ -1,0 +1,2 @@
+<mj-image mj-class="topLogoStyle" src="{{ logo_url }}"></mj-image>
+<mj-divider mj-class="borderAccentColor"></mj-divider>

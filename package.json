@@ -1,5 +1,21 @@
 {
-  "dependencies": {
+  "name": "saleor-admin-email-templates",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git:////github.com/saleor/saleor-admin-email-templates"
+  },
+  "author": "Saleor Commerce",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/saleor/saleor-admin-email-templates/issues"
+  },
+  "homepage": "http://saleor.io/",
+  "dependencies": {},
+  "devDependencies": {
     "mjml": "^4.13.0"
+  },
+  "scripts": {
+    "build-emails": "mjml -c.useMjmlConfigOptions -c.beautify false -l skip \"templated_email/source/*.mjml\" -o templated_email/compiled"
   }
 }

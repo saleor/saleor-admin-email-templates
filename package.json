@@ -16,6 +16,7 @@
     "mjml": "^4.13.0"
   },
   "scripts": {
-    "build-emails": "mjml -c.useMjmlConfigOptions -c.beautify false -l skip \"templated_email/source/*.mjml\" -o templated_email/compiled"
+    "build-emails": "mjml -c.useMjmlConfigOptions -c.beautify false -l skip \"templated_email/source/*.mjml\" -o templated_email/compiled",
+    "build-emails-beautify": "mjml -c.useMjmlConfigOptions -c.beautify true -l skip \"templated_email/source/*.mjml\" -o templated_email/compiled"
   }
 }
